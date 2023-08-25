@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html dir="rtl">
+<head>
+    <title>إقرار إستلام عمل</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+            font-weight: bold;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+
+        button[type="submit"] {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        /* Additional Styles */
+        .container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .animated-bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #ff7c00, #fcb800, #ff7c00, #fcb800);
+            background-size: 200% 200%;
+            animation: animatedBackground 20s linear infinite;
+        }
+
+        .form-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            opacity: 1;
+        }
+
+        @keyframes animatedBackground {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .logo {
+            display: block;
+            margin: 0 auto;
+            max-width: 45px; /* Adjust the size as desired */
+        }
+
+        .note {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #666;
+        }
+        .note2 {
+            margin-top: 10px;
+            font-size: 14px;
+            color: red;
+        }
+/* Media Queries */
+        @media screen and (max-width: 600px) {
+            form {
+                max-width: 100%;
+                padding: 10px;
+            }
+
+            .form-container {
+                padding: 15px;
+            }
+
+            .logo {
+                max-width: 80px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="animated-bg"></div>
+            
+        <div class="form-container">
+          <img class="logo" src="Oman.png" alt="Logo">
+           <div style="text-align: center; margin-bottom: 30px;">
+                <h2 style="font-size: 16px;">سلطنة عمان</h2>
+                <h3 style="font-size: 14px;">وزارة التربية والتعليم</h3>
+                <h3 style="font-size: 14px;">المديرية العامة للتربية والتعليم بمحافظة مسقط</h3>
+                <h3 style="font-size: 14px;">دائرة الشؤون الإدارية</h3>
+                <h3 style="font-size: 14px;">قسم التعيينات والتنقلات</h3>
+            </div>
+
+            <h1>إقرار إستلام عمل</h1>
+            <form method="POST" action="lookup.php">
+                <label for="id">رقمك المدني:</label>
+                <input type="text" name="id" id="id" pattern="[0-9]*" oninput="this.value = this.value.replace(/[^0-9]/g, '')" required>
+                <div class="note"> قم بإدخال رقمك المدني </div>
+                   <div class="note2"> ملاحظة : يرجى طباعة الإقرار وتسليمه لإدارة المدرسة بتاريخ 2023/8/27م </div>
+                <button type="submit">بحث</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
